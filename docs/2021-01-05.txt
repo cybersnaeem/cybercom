@@ -1,0 +1,79 @@
+Step To Work With Git And Github..
+
+1. Register With Github Account
+
+2. Login With Github Account..
+
+3. Goto Setting Option from User Account Option..
+
+4. From that select ssh option.. 
+
+5. click add ssh option
+
+6. setup git...
+	6.1 open git wherever you want file which containing you ssh key.
+	6.2 use command "ssh-keygen -t rsa -C 'naeem123650' "
+	6.3 to see the content of file you need to use cat command..
+	6.4 cat ~/.ssh/id_rca_1
+	6.5 this will display your ssh key copy this ssh key and paste it into the github setting/ssh
+	    give it suitable name..
+	6.6 save it..
+
+7. use following command 
+	
+	get nickname of your repo : git remote -v 
+
+8. push the content:
+
+	8.1 first create the file named index.js 
+	8.2 after that use 'git status' command to check the created file is committed or not..
+	8.3 this option will check whether the color of the file is red or green
+	8.4 if the color of your file is Red then its an uncommit file..
+	8.5 if the color of your file is green the its an committed file..
+	if Red.. the you need to use following git command to commit it.
+		git add <name of file> 
+	if you want to store more than one file you need to use 
+		git add .
+	this command store all the files and folders of your project..
+
+
+Github to Local Machine..
+==========================
+
+1. Create the Empty folder named 'my-app'
+2. open it. 
+3. right click on that window and open git command propt..
+4. copy the (address) or (ssh) Address from your project which you want to clone..
+5. use following command 
+	git clone <SSH or HTTP Address which you copied from the github project> 
+6. After this command you can see you full setup project in your 'my-app' folder..
+7. you can check it by using 'ls' command 
+
+
+after completion of this operation you need to commit all the changes in your github account
+
+git commit -m "i am done today's work" it..
+
+ 
+if you change any file then again your status will be like untracked so if you commit this changes 
+you have to use following command..
+
+git commit -a -m "i have change the content of file"
+
+after commit nothing we have to commit then after we have to push it into your repository that i have done today..
+
+git push origin batman-bike
+
+here your content will store in github only if you want to merge in master you have to use following command..
+
+        git checkout main
+
+git fetch is a primary command used to download contents from a origin and then push your changes into main branch
+
+    git fetch origin
+    git merge --no-ff(fastforward) origin/batsman-bike
+
+if you want to remove file then you need to use following command..
+
+    git rm <nameOfFile> -f(forcefully)
+
