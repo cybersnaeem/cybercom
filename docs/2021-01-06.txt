@@ -32,7 +32,7 @@ named index.js and index.html
 		-git add *.js
 		-git checkout codebranch
 		-git commit -m "upload only js file in code branch"
-		-git push origin codebranch
+		-git push origin codebranch 
 
 	this will store your js and html file in "codebranch" branch of practicebranch repository
 
