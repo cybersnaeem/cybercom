@@ -1,0 +1,94 @@
+first i read the concept of branch from the git and github branches 
+
+after that i have created one repository named as branch branch practice 
+
+where i created different different branches named as follow:
+
+	- codebranch
+	- documentbranch
+	- practice 
+
+steps i follow today::
+=======================
+
+-first i have created one repository named "branchpractice"
+
+- i have create one folder inside my directory.. and open in visual studio code
+
+- aftet i have created three branches in my repository by using following commands..
+
+	-git checkout -b codebranch
+	-git checkout -b documentbranch
+	-git checkout -b practice
+
+- after that i have created two files in my local project named as index.html and index.js file
+
+- after that i switching my branch from main to codebranch where i store all my code files which i created
+named index.js and index.html
+
+	commands:-
+	==========
+		-git add *.html (using this command you can store all the html extension file in repo)
+		-git add *.js
+		-git checkout codebranch
+		-git commit -m "upload only js file in code branch"
+		-git push origin codebranch 
+
+	this will store your js and html file in "codebranch" branch of practicebranch repository
+
+
+- after that i have created one file in my local project named 2021-01-06.txt inside "docs" folder
+
+- after that i switching my branch from codebranch to documentbranch where i store all my code files which i created
+named doc folder
+
+	
+	commands:-
+	==========
+		-git add docs/2021-01-06.txt
+		-git checkout documentbranch(switch from codebranch)
+		-git commit -m "add docs folder in documentbranch"
+		-git push origin documentbranch
+
+	this will store your docs containig file in "documentbranch" branch of practicebranch repository
+
+- after that i have created one file in my local project named cmds.txt inside "practice" folder
+
+- after that i switching my branch from documentbranch to "practice" branch where i store all my all comands that i perform today.
+in practise branch
+	
+	commands:-
+	==========
+		-git add practice/cmds.txt
+		-git checkout practice(switch from documentbranch)
+		-git commit -m "add practice folder and commands text within it"
+		-git push origin practice
+
+	this will store your docs containig file in "practice" branch of practicebranch repository
+
+
+
+-If you want to remove branch then you need to use following command..
+
+	command:
+	=========
+		- git branch -d (for delete) <NameOfTheBranch>
+
+if you want to navigate from one branch to another then we have two diffecrent commands..
+
+
+	command:
+	========
+	 	- git checkout -b <branchName>
+		- git switch <branchName>(already have a branch) or git switch -c <branchName>(create new branch)
+
+
+
+
+
+
+
+
+
+
+
