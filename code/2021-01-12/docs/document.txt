@@ -1,0 +1,51 @@
+Todays Points That I have Learn
+================================
+ 
+first i have practice on "arrays in javascript" in that i have learn methods related to an array.
+
+    - push()
+        -it will store the value in array(at the last position of an array)..
+
+    - pop()
+        -it will pop out (delete) the value from an array(from the last position of an array..)
+
+    - unshift()
+        - it will store the value in array(at the first position of an array)..
+
+    - shift()
+        -it will pop out (delete) the value from an array(from the first position of an array..)
+
+
+after that i have understand the concept of global execution..
+
+    where i have learn that our each task like if we define any function it will store in global execution stack..
+    after the completion of each function the function is popped out from the global exection stack..
+
+Hoisting..
+===========
+
+In Hoisting concept we can call the function before defining it.
+
+    example:. Find Out Age and Retirement..
+
+        // in case of function declaration it will work
+            --->possible
+            getAge(1998)
+            function getAge(age){
+                var d = new Date();
+                var currentAge = d.getFullYear()-age;
+                console.log('Current Age is: ' + currentAge);
+                return currentAge;
+            }
+
+In case of function expression.. we cannot call the function before defining it.
+
+        // in case of function expression it will not work
+            ---> not possible 
+                retirementDate(60);
+            var retirementDate = function retirement(retDateYear){
+                
+                var retire =  retDateYear - getAge(1998); 
+                console.log('you will be retire after '+retire + ' years');
+                return retire;
+            }
