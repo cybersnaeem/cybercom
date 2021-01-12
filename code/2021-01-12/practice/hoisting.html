@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script>
+            // in case of function declaration it will work
+            getAge(1998)
+            function getAge(age){
+                var d = new Date();
+                var currentAge = d.getFullYear()-age;
+                console.log('Current Age is: ' + currentAge);
+                return currentAge;
+            }
+
+            // in case of function expression it will not work
+            retirementDate(60);
+            var retirementDate = function retirement(retDateYear){
+                
+                var retire =  retDateYear - getAge(1998); 
+                console.log('you will be retire after '+retire + ' years');
+                return retire;
+            }
+
+            retirementDate(60);
+
+        </script>
+    </head>
+    <body>
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
