@@ -49,3 +49,9 @@ In case of function expression.. we cannot call the function before defining it.
                 console.log('you will be retire after '+retire + ' years');
                 return retire;
             }
+
+today there is not any practices are given thats why im done some practice by my own
+
+    - code of my whole day is on this give link..
+
+        https://github.com/cybersnaeem/cybercom/tree/javascript/code/2021-01-12/practice
