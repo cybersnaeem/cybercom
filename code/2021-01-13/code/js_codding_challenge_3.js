@@ -5,6 +5,7 @@ var array_total = []; // this array will store total amount after adding discoun
 document.querySelector('#content').style.display = 'none'; // i have design the bootstrap in first page load 
 //it will be hidden from user 
 
+
 //on button click event user can find the bill price and discounts
 function countTip() {
 

@@ -27,6 +27,7 @@ markObj.findBMI = johnObj.findBMI;
 // method call which display the BMI information of Mark Smith
 markObj.findBMI();
 
+
 // compare whose BMi is greater based on this condition
 if (johnObj.findBMI > markObj.findBMI) {
     //true
