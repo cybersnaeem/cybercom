@@ -1,0 +1,27 @@
+-> i have done practice on first class function means that function calls inside the function 
+
+
+->another topic i have learn that how function return function..
+
+    you can call the function inside function by two ways..
+
+        -> 1. example;;
+
+            var variable1 = function1(argument1)
+
+            variable1(argument2)
+
+        -> 2. example;;
+
+            function1(argumant1)(argument2)
+
+            so.. function1 return function and that 2nd function will generate the output..
+
+-> data privacy using IIFE(Immediately Invoke Function Expression)
+
+
+-> i have done the practice which is ask for.
+
+    Question : based on the job title display their name and interview question...(using closure..);
+
+
