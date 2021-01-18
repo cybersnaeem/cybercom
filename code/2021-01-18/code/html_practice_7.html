@@ -11,6 +11,15 @@
         th{
             padding-right: 50px;
         }
+        .th1{
+            padding-right: 150px;
+        }
+        .th2{
+            padding-right: 150px;
+        }
+        .th3{
+            padding-right: 30px;
+        }
     </style>
 </head>
 <body>
@@ -20,19 +29,19 @@
 <legend>Your Address</legend>
     <table>
         <tr>
-            <th>First Name</th>
+            <th class="th1">First Name</th>
             <td><input type="text" name="fname" required/></td>
         </tr>
         <tr>
-            <th>Last Name</th>
+            <th class="th1">Last Name</th>
             <td><input type="text" name="lname" required/></td>
         </tr>
         <tr>
-            <th>Street</th>
+            <th class="th1">Street</th>
             <td><input type="text" name="street"required /></td>
         </tr>
         <tr>
-            <th>City</th>
+            <th class="th1">City</th>
             <td><input type="text" name="city" required /></td>
         </tr>
     </table>
@@ -43,15 +52,15 @@
 
 <table>
     <tr>
-        <th>Biography</th>
+        <th class="th2">Biography</th>
         <td><textarea  name="biography"></textarea></td>
     </tr>
     <tr>
-        <th>Image</th>
+        <th class="th2">Image</th>
         <td><input type="file" name="image" required/></td>
     </tr>
     <tr>
-        <th>Age Group</th>
+        <th class="th2">Age Group</th>
         <td><input type="number" id="age" placeholder="0 to 9 Years" name="age" min="1" max="9"  required/></td>
     </tr>
 </table>
@@ -61,7 +70,7 @@
 <legend>Interests</legend>
 <table>
     <tr>
-        <th valign="top">Hobbies?</th>
+        <th valign="top" class="th3">Hobbies?</th>
         <td>
             <select name="hobbies" id="hobbies" multiple="multiple">
                 <option value="Playing Soccer">Playing Soccer</option>
@@ -72,7 +81,7 @@
         </td>
     </tr>
     <tr>
-        <th>Favourite Car?</th>
+        <th class="th3">Favourite Car?</th>
         <td>
             <select name="favourite-car" id="favourite-car">
                 <option value="Volvo">Volvo</option>
@@ -82,7 +91,7 @@
         </td>
     </tr>
     <tr>
-        <th>Favourite Public Transport?</th>
+        <th class="th3">Favourite Public Transport?</th>
         <td>
             <select name="cars" id="transport">
                 <optgroup label="Ground">
