@@ -1,0 +1,29 @@
+***************
+Html Learning*
+***************
+{
+:::::what i have done::::
+=============================
+
+->  learn new HTML 5 elements like fieldset , legend tags:::
+-------------------------------------------------------------
+
+    -> fieldset  : fieldset is the new html 5 element.. which is used as container inside that you can store whole html form..
+
+    -> legend    :  legend tag is used to provide the tag to the fieldset ...
+
+->after that i have learn select tag with different attributes:::
+-------------------------------------------------------------------
+
+    -> select element with "multiple" attribute..
+
+    ->  optgrp tag within select element
+}
+
+
+*********************
+JAVASCRIPT Learning  *
+*********************
+
+-> Aero Functions
+ 
