@@ -20,17 +20,23 @@
       </div>
     </div>
     <script>
-        var personData = JSON.parse(localStorage.getItem('personData'));
-
-        console.log(personData);
-
-        var html = '<div class="container"><table class="table">';
-        html+= '<thead><tr><th scope="col">Username</th><th scope="col">Email</th><th scope="col">DateOfBirth</th><tr><thead>';
-        for(let i=0;i<personData.length;i++){
-            html+= `<tbody><tr><td>${personData[i].name}</td><th>${personData[i].email}</th><th>${personData[i].dateOfBirth}</th><tr></tbody>`;
+        var personData = []; 
+        if(!localStorage.getItem('personData')){
+              var h1 = '<div class="container text-center"><h2>..There is Nothing To Display..</h2></div>';
+              document.getElementById('result').innerHTML = h1;
+        }else{
+            personData = JSON.parse(localStorage.getItem('personData'));
+            var html = '<div class="container"><table class="table">';
+            html+= '<thead><tr><th scope="col">Username</th><th scope="col">Email</th><th scope="col">DateOfBirth</th><tr><thead>';
+            for(let i=0;i<personData.length;i++){
+                html+= `<tbody><tr><td>${personData[i].name}</td><th>${personData[i].email}</th><th>${personData[i].dateOfBirth}</th><tr></tbody>`;
+            }
+            html+= '</table></div>';
+            document.getElementById('result').innerHTML = html;
         }
-        html+= '</table></div>';
-        document.getElementById('result').innerHTML = html;
+
+        //console.log(personData);
+
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
