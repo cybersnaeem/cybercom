@@ -29,21 +29,21 @@
         var data = person.sort((a,b)=>{
             return a.age - b.age;
         })
-
+        console.log(data);
         //
 
         function bubbleSort(arr) {
-        for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j + 1] < arr[j]) {
-                    // ES6 way of swapping array elements
-                    [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j + 1] < arr[j]) {
+                        // ES6 way of swapping array elements
+                        [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+                    }
                 }
             }
+            return arr;
         }
-        return arr;
-    }
-    console.log(bubbleSort(person));
+        console.log(bubbleSort(person));
     </script>
 </head>
 <body>
