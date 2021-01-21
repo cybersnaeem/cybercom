@@ -39,8 +39,9 @@ function getAge(date){
     var dt = new Date();    
     return dt.getFullYear() - d.getFullYear();
 }
- 
- var userData = JSON.parse(localStorage.getItem('userData'));
+
+function displayTable(){
+    var userData = JSON.parse(localStorage.getItem('userData'));
  
 var userTableData = `<table class="table table-bordered table-light" id="tableData">
               <thead>
@@ -54,20 +55,21 @@ var userTableData = `<table class="table table-bordered table-light" id="tableDa
                 </tr>
               </thead>
               <tbody>`
-               for(var i=0; i<userData.length ; i++){
+              
+               for(let [index, val] of userData.entries()){
                  userTableData+= `<tr>
-                                <th scope="row">${userData[i].name}</th>
-                                <td>${userData[i].email}</td>
-                                <td>${userData[i].password}</td>
-                                <td>${userData[i].dateOfBirth}</td>
+                                <th scope="row">${val.name}</th>
+                                <td>${val.email}</td>
+                                <td>${val.password}</td>
+                                <td>${val.dateOfBirth}</td>
                                 <td>
-                                   ${getAge(userData[i].dateOfBirth)}
+                                   ${getAge(val.dateOfBirth)}
                                 </td>
                                 <td>
-                                    <button type="button" onclick="updateUser('${userData[i].name}','${userData[i].email}','${userData[i].password}','${userData[i].dateOfBirth}')" class="btn btn-link"> Update </button>
+                                    <button type="button" onclick="updateUser('${index}','${val.name}','${val.email}','${val.password}','${val.dateOfBirth}')" class="btn btn-link"> Update </button>
                                 </td>
                                 <td>
-                                <button type="button" onclick="deleteUser('${userData[i].name}')" class="btn btn-link"> Delete </button>
+                                <button type="button" onclick="deleteUser('${index}')" class="btn btn-link"> Delete </button>
                                 </td>
                             </tr>`   
                }
@@ -75,23 +77,23 @@ var userTableData = `<table class="table table-bordered table-light" id="tableDa
 userTableData += `</tbody></table>`;
 
 document.getElementById('resultUser').innerHTML = userTableData ;
+}
+displayTable()
+ 
 //////////////////////////////////////////table data display finish-/////////////////////////
 
 
-function deleteUser(uname)
+function deleteUser(id)
 {   
-    console.log(uname);
-    for(var i=0;i<userData.length;i++){
-        console.log(userData[i].uname)
-    }
+    var data = JSON.parse(localStorage.getItem('userData'));
+    data.splice(id, 1);
+    localStorage.setItem("userData", JSON.stringify(data));
     //console.log(JSON.parse(localStorage.getItem('userData')));
-   
-    
-   
+    displayTable()
 
 }
 
-function updateUser(name,email,pass,dob){
+function updateUser(id,name,email,pass,dob){
     
     document.getElementById('name').value= name;
     document.getElementById('email').value= email;
