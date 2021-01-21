@@ -19,13 +19,13 @@
                
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                    <li class="nav-item active pl-4">
-                       <a class="nav-link" href="#">Dashboard</a>
+                       <a class="nav-link" href="/Dashboard.html">Dashboard</a>
                    </li>
                    <li class="nav-item pl-4">
-                       <a class="nav-link" href="#">Users</a>
+                       <a class="nav-link" href="./User.html">Users</a>
                    </li>
                    <li class="nav-item pl-4">
-                        <a class="nav-link" href="#">Login Session</a>
+                        <a class="nav-link" href="./UserSession.html">Login Session</a>
                     </li>
                     <li class="nav-item pl-4">
                         <a class="nav-link" href="#">Logout</a>
@@ -69,39 +69,14 @@
                 </div>
             </div>
             <div class="form-group text-center">
-                <button type="button" onclick="addUser()" class="btn btn-warning">Add User</button>    
+                <button type="button" onclick="addUser()" class="btn btn-warning" id="addUser">Add User</button>    
             </div>   
        </div>
-       <div class="jumbotron mt-5 text-center">    
-            <table class="table table-bordered table-light">
-              <thead>
-                <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Password</th>
-                  <th scope="col">Birthdate</th>
-                  <th scope="col">Age</th>
-                  <th scope="col" colspan="2">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">naeem</th>
-                  <td>naeemmemon60650@gmail.com</td>
-                  <td>naeem123</td>
-                  <td>17/12//98</td>
-                  <td>22</td>
-                  <td>
-                      <button type="button" onclick="updateUser()" class="btn btn-link"> Update </button>
-                  </td>
-                  <td>
-                    <button type="button" onclick="deleteUser()" class="btn btn-link"> Delete </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+       <div class="jumbotron mt-5 text-center" id="resultUser">    
+           
         </div>
     </div>
+    <script src="./User.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

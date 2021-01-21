@@ -1,5 +1,5 @@
 var adminArrayData = [];
-var adminFormData = {};
+var adminData = {};
  
     if(localStorage.getItem('adminData')){
         adminArrayData = JSON.parse(localStorage.getItem('adminData'));
@@ -23,7 +23,7 @@ var adminFormData = {};
        state:state
      };
      console.log(adminData);
-     
+
      if(localStorage.getItem('adminData')){
         adminArrayData.push(adminData); 
        localStorage.setItem('adminData',JSON.stringify(adminArrayData));

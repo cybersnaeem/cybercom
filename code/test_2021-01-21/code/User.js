@@ -67,7 +67,7 @@ var userTableData = `<table class="table table-bordered table-light" id="tableDa
                                     <button type="button" onclick="updateUser('${userData[i].name}','${userData[i].email}','${userData[i].password}','${userData[i].dateOfBirth}')" class="btn btn-link"> Update </button>
                                 </td>
                                 <td>
-                                <button type="button" onclick="deleteUser()" class="btn btn-link"> Delete </button>
+                                <button type="button" onclick="deleteUser('${userData[i].name}')" class="btn btn-link"> Delete </button>
                                 </td>
                             </tr>`   
                }
@@ -78,6 +78,18 @@ document.getElementById('resultUser').innerHTML = userTableData ;
 //////////////////////////////////////////table data display finish-/////////////////////////
 
 
+function deleteUser(uname)
+{   
+    console.log(uname);
+    for(var i=0;i<userData.length;i++){
+        console.log(userData[i].uname)
+    }
+    //console.log(JSON.parse(localStorage.getItem('userData')));
+   
+    
+   
+
+}
 
 function updateUser(name,email,pass,dob){
     
@@ -85,12 +97,29 @@ function updateUser(name,email,pass,dob){
     document.getElementById('email').value= email;
     document.getElementById('password').value= pass;
     document.getElementById('dob').value= dob;
-    document.getElementById('addUser').value = 'Update User';
-
-    for(var i=0;i<userData.length;i++ ){
-        
+    document.getElementById('addUser').innerHTML = 'Update User';
+    document.getElementById('addUser').setAttribute('id','updateUser'); 
+    
+    if(document.getElementById('updateUser').innerHTML === 'updateUser')  
+    {
+        document.getElementById('updateUser').addEventListener('click',
+        function updateData(){
+             for(var i=0;i<userData.length;i++){
+                 if(userData[i].name === name){
+                     userData[i].email = email;
+                     userData[i].password = pass;
+                     userData[i].dateOfBirth = dob;
+                     console.log('success'); 
+                 }
+             }
+          }
+        )
     }
+   
+   }
+
+    
     //console.log(name,email,pass,dob);
- }
+ 
 
 
