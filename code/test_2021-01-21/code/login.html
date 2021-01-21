@@ -11,6 +11,9 @@
   </head>
   <body>
     <div class="container">
+        <div class="alert alert-danger text-center mt-3" style="display:none" id="errorDiv" role="alert">
+            <h5 class="alert-heading">Wrong Email And Password Please Try Again</h5>
+          </div>
         <div class="row pt-5">
             <div class="col-md-3 col-lg-3">
 
@@ -40,7 +43,9 @@
                         <p class="text-center">OR</p>
                         <hr>
                         <div class="form-group pb-2">
-                            <button type="button" onclick="registers()" class="btn btn-warning  btn-block">Register Now</button>    
+                            <form action="./Register.html">
+                                <button type="submit" class="btn btn-warning  btn-block" id="register">Register Now</button>    
+                            </form>
                         </div>
                     </p>
                   </div>
@@ -51,6 +56,7 @@
             </div>
         </div>
     </div>
+    <script src="login.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
