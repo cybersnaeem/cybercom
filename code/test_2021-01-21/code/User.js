@@ -1,6 +1,9 @@
 var userArrayData = [];
 var userFormData = {};
  
+    var AdminName = JSON.parse(localStorage.getItem('adminData'));
+    document.getElementById('username').innerHTML = `hello! `+AdminName[0].name;
+
     if(localStorage.getItem('userData')){
         userArrayData = JSON.parse(localStorage.getItem('userData'));
     }
@@ -94,31 +97,23 @@ function deleteUser(id)
 }
 
 function updateUser(id,name,email,pass,dob){
-    
+    var data = JSON.parse(localStorage.getItem('userData'));
     document.getElementById('name').value= name;
     document.getElementById('email').value= email;
     document.getElementById('password').value= pass;
     document.getElementById('dob').value= dob;
     document.getElementById('addUser').innerHTML = 'Update User';
-    document.getElementById('addUser').setAttribute('id','updateUser'); 
-    
-    if(document.getElementById('updateUser').innerHTML === 'updateUser')  
-    {
-        document.getElementById('updateUser').addEventListener('click',
-        function updateData(){
-             for(var i=0;i<userData.length;i++){
-                 if(userData[i].name === name){
-                     userData[i].email = email;
-                     userData[i].password = pass;
-                     userData[i].dateOfBirth = dob;
-                     console.log('success'); 
-                 }
-             }
-          }
-        )
+    document.getElementById('addUser').setAttribute('id','updateUser');
+    console.log(document.getElementById('updateUser').id);
+    if(document.getElementById('addUser').innerHTML === 'Update User'){
+        document.getElementById('updateUser').addEventListener('click',function(){
+
+        })
     }
-   
-   }
+
+}
+
+
 
     
     //console.log(name,email,pass,dob);
